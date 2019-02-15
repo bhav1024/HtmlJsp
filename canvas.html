@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title>canvas demostration </title>
+    <script>
+        function draw(){
+            var canvas=document.getElementById("myCanvas");
+            var context=canvas.getContext("2d");
+            context.moveTo(0,0);
+            // context.lineTo(200,100);
+            // context.stroke();
+            context.font = "30px Arial";
+            context.fillText("cognizant", 10, 50);
+        }
+    </script>
+</head>
+	<body onload="draw()">
+            <canvas id="myCanvas" width="600" height="500" style="border:1px solid #000000;"></canvas>
+    </body>
+</html>

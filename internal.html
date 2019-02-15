@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Internal styling</title>
+    </head>
+    <style>
+        #p1{
+            color: darkblue;
+            font-family: cursive;
+            font-size: 1cm;
+        }
+        #p2{
+            color: darkgreen;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.5cm;
+        }
+        .pclass{
+            color: aqua;
+            font-size: 1cm;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#p1").click(function(){
+                this.css("color","red");
+        });
+
+    </script>
+
+    <body>
+        <p id="p1">
+            p111111111111111111
+        </p><br>
+        <p id="p2">
+            p222222222222222222
+        </p>
+
+        <p class="pclass">This is the class paragraph</p>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Demostrate Dom API</title>
+
+    <script>
+        function change(){
+           var p=document.getElementById("p1");   //document is a implicit object
+           p.innerHTML="DOM API has changed content";
+
+           document.getElementById("b1").value="clicked";
+
+           
+        }
+        function changes(){
+            document.getElementById("p2").setAttribute("style","color:green");
+        }
+    </script>
+    </head>
+    
+    <body>
+        <p id="p1" onclick="change()">my paragraphh >>click to change the content of the paragraphh </p>
+        <p id="p2" style="color:blueviolet" onmouseover="changes()">Mouse over will change colour</p>
+        <input type="button" id="b1" value="click" onclick="change()"/>
+    </body>
+</html>
+        

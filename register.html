@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Register the user</title>
+    <script src="validations.js"></script>
+
+    </head>
+    
+    <body>
+        <form>
+            <table >
+                <tr>
+                    <td><label id="firstname1">Firstname:</label></td>
+                    <td><input type="text" id="firstname" placeholder="place type first name" pattern="[a-zA-Z]"></td>
+                </tr>
+
+                <tr>
+                    <td><label id="lastname1">Lastname:</label></td>
+                    <td><input type="text" id="lastname" placeholder="place type last name" pattern="[a-zA-Z]" ></td>
+                </tr>
+
+                <tr>
+                        <td><label id="email" >Email:</label></td>
+                        <td><input type="email" placeholder="char@char.domain" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onblur="match()"></td>
+                </tr>
+
+                <tr>
+                    <td><label id="username1">User name:</label></td>
+                    <td><input type="text" pattern="[a-zA-Z]" id="user" onblur="validates()"></td>
+                </tr>
+
+                <tr>    
+                        <td><label id="password">Password:</label></td>
+                       <td><input type="password" placeholder="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"></td>
+                </tr>
+
+                <tr>    
+                        <td><label id="RetypePassword">Retype Password:</label></td>
+                       <td><input type="password" placeholder="Retype password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/"></td>
+                </tr>
+
+                <tr>
+                    <td><label id="gender">Gender:</label></td>
+                   <td>Male:<input type="radio" name="gender" value="male/" checked>
+                   Female:<input type="radio" name="gender"></td>
+                </tr>
+
+                <tr>
+                    <td><lable id="colour">Favourite colour:</lable></td>
+                    <td><input type="color" id="color"></td>
+
+                </tr>
+
+                <tr>
+                    <td><label id="language">Programming language:</label></td>
+                    <td>Java:<input type="checkbox" value="java/">
+                        C++:<input type="checkbox" value="c++/">
+                        C#:<input type="checkbox" value="c#/" >
+                        Python:<input type="checkbox" value="python/" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label id="dob">Date of Birth:</label>
+                    </td>
+                    <td>
+                        <input type="date">
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><label id="country">Country</label></td>
+                    <td>
+                        <input list="countrylist">
+                            <datalist id="countrylist">
+                                <option value="in">INDIA</option>
+                                <option value="ca">CANADA</option>
+                                <option value="uk">UK</option>
+                             </datalist>
+                         </input>
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td><label id="age">AGE:</label></td>
+                    <td>
+                        <input type="number" min="18" max="50"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                            <label id="term">please accept the terms and conditions</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="terms" onclick="enable()"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" id="register" value="Register" disabled/></td>
+                </tr>
+
+
+
+
+            </table>
+        </form>
+    
+    </body>
+</html>

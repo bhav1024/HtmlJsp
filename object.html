@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demostrate object in javascript</title>
+        <script>
+        var date=new Date();
+        console.log("date: "+date);
+        var str=new String("javaSCript");
+        console.log("str: "+str);
+        var no=new Number(10);
+        console.log("number: "+no);
+
+        var stu=new Object();
+        stu.studentId="S001";
+        stu.studentName="Bhawesh";
+        stu.fees=23456;
+        console.log("student id: "+stu.studentId+"\n"+"student name: "+stu.studentName+"\n"+"student fees: "+stu.fees);
+
+        function employee(empID,empName){
+            this.empID=empID;
+            this.empName=empName;
+        }
+        var emp=new employee(101,"amit");
+        console.log("empid: "+ emp.empID+"\n"+"empname: "+emp.empName);
+
+        var course={"courseID":"C001","courseName":".Net"};
+        console.log("courseID: "+ course.courseID+"\n"+"coursename: "+course.courseName);
+
+        var courseArray=[
+                {"courseID":"C001","courseName":".Net"},
+                {"courseID":"C002","courseName":"java"},
+                {"courseID":"C003","courseName":"c++"},
+        ]
+
+        courseArray.forEach(function(c){
+                console.log("courseID: "+ c.courseID+"\n"+"coursename: "+c.courseName)
+        });
+
+        </script>
+    </head>
+</html>
